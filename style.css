@@ -1,0 +1,175 @@
+body {
+    background-color: #062374;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* #modalOverlay.active {
+    display: block;
+    cursor: pointer;
+} */
+
+#container {
+    border-radius: 30px;
+    padding: 50px;
+    background-color: orange;
+}
+
+#promotion-code {
+    text-align: center;
+
+}
+
+#promotion-code>input {
+    text-align: center;
+    margin-top: 30px;
+    border: 5px solid rgb(177, 139, 70);
+    border-radius: 3px;
+    box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.3);
+    padding: 8px;
+}
+
+#start-game img {
+    display: block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#start-game img:active {
+    transform: scale(0.8);
+}
+
+#manivela-btn {
+    margin-left: 30px;
+    height: 200px;
+    width: 50px;
+}
+
+.slot {
+    overflow: hidden;
+    display: flex;
+    width: 900px;
+    height: 250px;
+    box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+}
+
+.column {
+    background-color: rgb(247, 245, 245);
+    flex: 1;
+    width: 50px;
+    border: 5px solid rgb(177, 139, 70);
+}
+
+.column img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilo para as colunas vencedoras */
+.winner-column {
+    animation: winnerAnimation 1s ease-in-out infinite;
+    /* Aplicando a animação */
+}
+
+/* Estilos para o modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    animation: fadeIn 0.9s forwards;
+}
+
+.modal-content {
+    /* background-color: rgba(0, 0, 0, 0.4); */
+    margin: auto;
+    padding: 20px;
+    /* border: 1px solid #888; */
+    width: 80%;
+    /* Define a largura do modal */
+    max-width: 600px;
+    /* Limita a largura máxima do modal */
+    box-sizing: border-box;
+    /* Inclui o padding e a borda na largura total */
+    text-align: center;
+    /* Centraliza o conteúdo */
+}
+
+.modal-content img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes winnerAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes rotateDownAndBack {
+    0% {
+        transform: rotateX(0deg) translateY(0);
+    }
+
+    50% {
+        transform: rotateX(-90deg) translateY(50px);
+    }
+
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
